@@ -2,8 +2,8 @@ import { dialogueData, scaleFactor } from "./constants";
 import { k } from "./kaboomCtx";
 import { displayDialogue, setCamScale } from "./utils";
 
-const backgroundMusic = document.getElementById("background-music")
-backgroundMusic.play()
+// const backgroundMusic = document.getElementById("background-music")
+// backgroundMusic.play()
 
 
 k.loadSprite("spritesheet", "./spritesheet.png", {

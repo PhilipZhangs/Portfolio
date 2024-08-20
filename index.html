@@ -58,6 +58,13 @@
         font-size: inherit;
       }
 
+      .start-music-btn {
+        font-family: monogram, monospace;
+        border-style: none;
+        border-radius: 3px;
+        font-size: inherit;
+      }
+
       .btn-container {
         align-self: flex-end;
         margin-top: 1rem;
@@ -71,11 +78,13 @@
         flex-direction: column;
         color: rgb(238, 238, 238);
       }
+    
     </style>
     <div id="app">
       <div>
-        <p class="note">Use the arrow keys or click the cursor to move.</p>
-
+        <p class="note">Use the arrow keys or click the cursor to move.
+          <button id="start-music-btn" class="ui-close-btn">Start Music</button>
+        </p>
         <div id="textbox-container" style="display: none">
           <div id="textbox">
             <p id="dialogue" class="ui-text"></p>
@@ -89,17 +98,34 @@
     </div>
 
     <!-- Background Music -->
-    <audio id="background-music" src="/animalcrossing.mp3" autoplay loop></audio>
-
+    <audio id="background-music" src="/animalcrossing.mp3"></audio>
     <audio id="dialogue-sound" src="/dialogopen.wav"></audio>
-
+    
     <script>
-      const backgroundAudio = document.getElementById('background-music');
-      backgroundAudio.volume = 0.2; // Set volume to 20%
-
-      const textBoxAudio = document.getElementById('dialogue-sound');
-      textBoxAudio.volume = 0.1; // Set volume to 10%
-
+      document.addEventListener('DOMContentLoaded', () => {
+        const startMusicBtn = document.getElementById('start-music-btn');
+        const backgroundAudio = document.getElementById('background-music');
+        backgroundAudio.volume = 0.2; // Set volume to 20%
+  
+        startMusicBtn.addEventListener('click', () => {
+          // Ensure AudioContext is resumed or created
+          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          if (audioContext.state === 'suspended') {
+            audioContext.resume().then(() => {
+              backgroundAudio.play().catch(error => {
+                console.error('Failed to play audio:', error);
+              });
+            }).catch(error => {
+              console.error('Failed to resume audio context:', error);
+            });
+          } else {
+            backgroundAudio.play().catch(error => {
+              console.error('Failed to play audio:', error);
+            });
+          }
+          startMusicBtn.style.display = 'none'; // Hide button after starting music
+        });
+      });
     </script>
 
     <script type="module" src="src/main.js"></script>
