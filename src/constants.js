@@ -17,7 +17,7 @@ export const dialogueData = {
       <img src="philipzhang_cv2024.png" style="max-width: 100%; max-height: 100%; object-fit: contain;">
     </div>`,
 
-    projects: `My friends and I made this cool <a href="https://sites.google.com/view/cmpt362-cell-identifier-g24/home?authuser=0" target="_blank">study tool</a> for biology students!`,
+    projects: `My friends and I made this cool <a href="https://sites.google.com/view/cmpt362-cell-identifier-g24/home?authuser=0" target="_blank">study tool</a> for biology students! We developed the mobile app on Android Studio using Kotlin.`,
 
     library: `ToDo`,
 
