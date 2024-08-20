@@ -71,11 +71,10 @@
         flex-direction: column;
         color: rgb(238, 238, 238);
       }
-
     </style>
     <div id="app">
       <div>
-        <p class="note">Tap/Click around to move</p>
+        <p class="note">Use the arrow keys or click the cursor to move.</p>
 
         <div id="textbox-container" style="display: none">
           <div id="textbox">
@@ -88,6 +87,21 @@
       </div>
       <canvas id="game"></canvas>
     </div>
+
+    <!-- Background Music -->
+    <audio id="background-music" src="animalcrossing.mp3" autoplay loop></audio>
+
+    <audio id="dialogue-sound" src="dialogopen.wav"></audio>
+
+    <script>
+      const backgroundAudio = document.getElementById('background-music');
+      backgroundAudio.volume = 0.2; // Set volume to 20%
+
+      const textBoxAudio = document.getElementById('dialogue-sound');
+      textBoxAudio.volume = 0.1; // Set volume to 10%
+
+    </script>
+
     <script type="module" src="src/main.js"></script>
   </body>
 </html>

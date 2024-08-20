@@ -1,6 +1,7 @@
 export function displayDialogue(text, onDisplayEnd) {
     const dialogueUI = document.getElementById("textbox-container");
     const dialogue = document.getElementById("dialogue");
+    const dialogSound = document.getElementById("dialogue-sound")
   
     dialogueUI.style.display = "block";
     let index = 0;
@@ -15,6 +16,9 @@ export function displayDialogue(text, onDisplayEnd) {
   
       clearInterval(intervalRef);
     }, 1);
+    
+    dialogSound.play()
+
   
     const closeBtn = document.getElementById("close");
   
