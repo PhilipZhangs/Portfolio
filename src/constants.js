@@ -6,7 +6,7 @@ export const dialogueData = {
 
     "cs-degree": `This is my CS degree. I hung it on the wall because I'm proud of it. I started my undergrad studying Business, but during the COVID-19 pandemic, I discovered a passion for technology and creation, which led me to switch majors.`,
 
-    "sofa-table": `A sofa. I like to relax here and eat food. My favorite meal right now is Big Way Hotpot. Check out the <a href="https://github.com/philipzhangs" target="_blank">mobile app</a> I made for them! `,
+    "sofa-table": `A sofa. I like to relax here and eat food. My favorite meal right now is Big Way Hotpot. Check out the <a href="https://github.com/PhilipZhangs/BigWayMobileApp" target="_blank">mobile app</a> I made for them! `,
 
     tv: `ToDo`,
 
