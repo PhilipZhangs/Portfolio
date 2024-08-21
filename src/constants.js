@@ -12,7 +12,8 @@ export const dialogueData = {
 
     bed: `I'm ready for a nap, check out my <a href="https://www.linkedin.com/in/philipzhangs/" target="_blank">LinkedIn</a>!`,
 
-    "resume": `You found my resume! <p></p>
+    "resume": `You found my <a href="https://github.com/PhilipZhangs/Resume" target="_blank">resume</a>!
+    <p></p>
     <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 540px; overflow: hidden;">
       <img src="philipzhang_cv2024.png" style="max-width: 100%; max-height: 100%; object-fit: contain;">
     </div>`,
