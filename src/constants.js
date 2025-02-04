@@ -32,10 +32,20 @@ export const dialogueData = {
     library: `some photos just to give you an idea of the kind of person i am
     <p></p>
     <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 540px; overflow: hidden;">
-      <img src="hike-back.jpeg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-    </div>`,
+      <img src="hike-headshot.jpeg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+    </div>
+    
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 540px; overflow: hidden;">
+      <img src="basketball.JPG" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+    </div>
 
-    furniture: `Under construction`,
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 540px; overflow: hidden;">
+      <img src="sf.jpeg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+    </div>
+    `
+    ,
+
+    furniture: `under construction until i think of something clever`,
 
     exit: `thanks for checking out my portfolio. to exit, just close the tab.`,
   };
